@@ -1,0 +1,346 @@
+#section_1 {
+    display: block;
+}
+
+#section_2,
+#section_3,
+#section_4 {
+    display: none;
+}
+
+#appLogo {
+    width: 60px;
+    height: 59px;
+    background-image: url(/assets/appImages/app_logo.jpg);
+    border-radius: 100px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+#pagetitle h1 {
+    font-size: 35px;
+    line-height: 35px;
+    color: #000;
+    margin-top: -10px;
+    font-family: "Open Sans", sans-serif;
+}
+
+#pagetitle h3 {
+    font-size: 13px;
+    line-height: 18px;
+    color: #000;
+    font-weight: normal;
+    font-family: "Open Sans", sans-serif;
+}
+
+#signUpPrev {
+    display: none;
+}
+
+.sign-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.form-full-width {
+    width: 100%;
+}
+
+.signupbased {
+    width: 100%;
+    background: #f5f5f5;
+}
+
+.closebtn {
+    font-size: 16px;
+    border-radius: 100px;
+    height: 100px;
+    width: 100px;
+    margin-left: 0;
+    margin-top: 0;
+    position: absolute;
+    z-index: 11;
+    top: -48px;
+    left: -50px;
+    background: #fafbfc;
+    box-shadow: 0 0 15px 5px #ccc;
+}
+
+.form-control {
+    height: auto;
+}
+
+.form-control .label {
+    font-size: 12px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border: none;
+}
+
+.signup_right_bg {
+    width: 90%;
+    background: #fff;
+    border-radius: 0 170px 0 0;
+}
+
+.closebtn .mat-icon {
+    margin-left: 36px;
+    margin-top: 35px;
+    color: #999;
+}
+
+#formContainer {
+    margin-top: 30px;
+}
+
+#formContainer .mat-icon {
+    position: absolute;
+    right: 0;
+    font-size: 15pt;
+    bottom: 0px;
+    color: #999;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+.next_form {
+    position: absolute;
+    overflow: hidden;
+    right: -22px;
+    width: 60px;
+    height: 60px;
+    background: #fbc219;
+    border-radius: 100%;
+    display: flex;
+    color: #fff;
+    box-shadow: 0 0 10px 3px #ccc;
+}
+
+#formContainer .next_form .mat-icon {
+    position: relative;
+    right: 4px;
+    font-size: 22pt;
+    bottom: 3px;
+    color: #000 !important;
+}
+
+.back_form {
+    position: absolute;
+    overflow: hidden;
+    left: -16px;
+    width: 60px;
+    height: 60px;
+    background: none;
+    border-radius: 100%;
+    display: flex;
+    color: #fff;
+}
+
+.back_form button:focus {
+    outline: none !important;
+}
+
+.back_form .mat-button,
+.back_form .mat-button:active {
+    background: none !important;
+}
+
+#formContainer .back_form .mat-icon {
+    position: relative;
+    right: 4px;
+    font-size: 22pt;
+    bottom: 3px;
+    color: #cacaca;
+}
+
+#termAndConditionContainer p {
+    color: #000;
+    font-size: 13px;
+    text-align: center;
+    line-height: 21px;
+    margin: 0;
+}
+
+#termAndConditionContainer {
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+    height: 40px;
+}
+
+#termAndConditionContainer span {
+    color: #7991fc;
+    text-decoration: underline;
+}
+
+.addressAPIResultDialogBox {
+    display: none;
+}
+
+.form-control.is-invalid {
+    background-image: url()!important;
+}
+
+.step_point {
+    position: absolute;
+    right: -40px;
+    top: 93px;
+    height: auto;
+    width: 30px;
+    /* background: #ccc; */
+}
+
+.step_point div {
+    width: 25px;
+    height: 23px;
+    position: relative;
+    margin-bottom: 99px;
+}
+
+.step_point div:first-child {
+    left: -16px;
+}
+
+.step_point div span {
+    background: #ccc;
+    display: block;
+    width: 13px;
+    height: 13px;
+    border-radius: 50px;
+    position: relative;
+}
+
+.step_point div.visited span {
+    background: #fbc219;
+}
+
+.step_point div.active span {
+    transform: scale(1.4);
+    background: #fbc219;
+}
+
+.step_point div.active::after {
+    content: "";
+    border: solid 1px#fbc219;
+    position: absolute;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    margin: -6px;
+    border-radius: 50px;
+    top: 0;
+}
+
+#signupContainer {
+    padding-top: 95px;
+}
+
+.search_btn {
+    background-color: #fbc219;
+    color: #1c1c1c;
+    border-radius: 50px;
+    padding: 0px 40px;
+    font-size: 16px;
+}
+
+.location_form {
+    padding-bottom: 15px;
+}
+
+#formContainer .mat-form-field.mat-focused .mat-icon {
+    color: #fbc219;
+}
+
+.hideSignInSuccess {
+    display: none !important;
+}
+
+.signinsuccess {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 1;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background: #fff;
+  
+}
+
+.signin_inner {
+    text-align: center;
+    padding: 0 30px;
+}
+
+.signin_inner h3 {
+    font-size: 21px;
+    color: #3c3c3c;
+    line-height: 22px;
+    font-weight: normal;
+}
+
+.signin_inner h2 {
+    font-size: 30px;
+    color: #3c3c3c;
+    font-weight: bold;
+    line-height: 24px;
+    margin-bottom: 68px;
+    position: relative;
+}
+
+.signin_inner h2:after {
+    content: "";
+    position: absolute;
+    border-bottom: solid 1px #e0e0e0;
+    left: 0;
+    right: 0;
+    width: 27%;
+    margin: 0 auto;
+    bottom: -13px;
+}
+
+.goverify_email{
+    border-radius: 50px;
+    margin-top: 25px;
+    line-height: 36px;
+    font-size: 18px;
+    outline: none;
+    color: #1c1c1c;
+    box-shadow: none !important;
+    background: #fbc219;
+    padding: 0 40px;
+}
+
+.mat-card {
+    margin-bottom: 15px;
+    border-radius: 0 !important;
+    border-bottom: solid 1px #e8e8e8;
+    padding: 5px 0 !important;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+button {
+    outline: none;
+}
+
+.bottom_margin {
+    height: 62px;
+    position: absolute;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#genderLabel .mat-card {
+    border-bottom: none !important;
+}
+
+@media (max-width: 320px) {}

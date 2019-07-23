@@ -1,0 +1,149 @@
+<div id="userprofile">
+        <div class="user_setting">
+            <p>Account Settings</p>
+        </div>
+    
+        <div class="container">
+            <div class="col-md-12 setheight">
+    
+                <div class="userdata">
+                    <div class="usir_img"><img src="assets/appImages/profile.png" alt=""><span><mat-icon>camera_alt_outlin</mat-icon></span></div>
+                    <div class="user_text">
+                        <h3>Welocme</h3>
+                        <h2>Hattie Brawner</h2>
+                    </div>
+                    <div class="user_lock">
+                        <button class="" mat-raised-button="mat-raised-button">
+                            <mat-icon>lock_outline</mat-icon>
+                        </button>
+                    </div>
+                    <div class="user_lock" (click)="appLogoutUser($event)">
+                        <button class="" mat-raised-button="mat-raised-button">
+                            <mat-icon>exit_to_app_outline</mat-icon>
+                        </button>
+                    </div>
+                </div>
+    
+                <mat-tab-group>
+                    <mat-tab label="Settings">
+                        <div class="formdata">
+                            <mat-form-field class="form-group">
+                                <input matInput="matInput" value="Hattie" type="text" class="form-control" placeholder="First Name" autocomplete="off" maxlength="26" required />
+                                <mat-icon>person_outline</mat-icon>
+                            </mat-form-field>
+    
+                            <mat-form-field class="form-group">
+                                <input matInput="matInput" value="m"  type="text" class="form-control" placeholder="Middle Name" autocomplete="off" maxlength="26" />
+                                <mat-icon>person_outline</mat-icon>
+                            </mat-form-field>
+    
+                            <mat-form-field class="form-group">
+                                <input matInput="matInput" value="Brawner" type="text" class="form-control" placeholder="Last Name" autocomplete="off" maxlength="26" required />
+                                <mat-icon>person_outline</mat-icon>
+                            </mat-form-field>
+    
+                            <mat-form-field class="form-group">
+                                <input matInput="matInput" value="hattie152@gmail.com" type="email" class="form-control" placeholder="Email Address" autocomplete="off" maxlength="26" />
+    
+                                <mat-icon>mail_outline</mat-icon>
+                            </mat-form-field>
+    
+                            <mat-form-field class="form-group">
+                                <input matInput="matInput" value="05/21/1995" type="email" class="form-control" placeholder="Email Address" autocomplete="off" maxlength="26" />
+    
+                                <mat-icon>mail_outline</mat-icon>
+                            </mat-form-field>
+                            
+                            <!-- <mat-form-field class="form-group datepicker_signup" (click)="open()">
+                                <input matInput="matInput" [min]="minDate" [max]="maxDate" [matDatepicker]="picker" placeholder="Date of Birth" class="form-control" autocomplete="off" (keypress)="numberDateOnly($event)" [maxLength]="DOBMaxLength" id="DOB" />
+    
+                                <mat-datepicker-toggle matSuffix="matSuffix" [for]="picker" [disableRipple]="true">
+                                </mat-datepicker-toggle>
+    
+                                <mat-datepicker touchUi="touchUi" #picker disabled="false">
+                                </mat-datepicker>
+                            </mat-form-field>  -->
+     
+    
+                            <div id="genderLabel">
+                                <p>Gender</p>
+                                <div class="gender_box">
+                                    <div class="gender_male"><img src="assets/appImages/gender/male.svg" alt=""></div>
+                                    <div class="gender_female"><img src="assets/appImages/gender/woman.svg" alt=""></div>
+                                    <div class="gender_other"><img src="assets/appImages/gender/unisex.svg" alt=""></div>
+                                </div>
+    
+                                <mat-slider class="example-margin" max="100" min="0" step="50"></mat-slider>
+                            </div>
+    
+                          
+    
+                            <mat-form-field class="form-group">
+                                <input matInput="matInput" type="tel" class="form-control" placeholder="NHS Number" autocomplete="off"  id="NHS" />
+    
+                                <mat-icon>add_outline</mat-icon>
+                            </mat-form-field>
+    
+                            <mat-form-field class="form-group">
+                                <input matInput="matInput" type="tel" required class="form-control" id="userPhoneNumber" placeholder="Phone Number" autocomplete="off" />
+    
+                                <mat-icon>call_outline</mat-icon>
+                            </mat-form-field>
+    
+    
+                            <mat-form-field class="form-group">
+                                <input matInput="matInput" type="text" required class="form-control" id="userAddress" placeholder="Address" autocomplete="off" maxlength="7" />
+    
+                                <mat-icon>location_on_outline</mat-icon>
+                            </mat-form-field>
+                            <div class="signinbtn text-center">
+                                    <button mat-raised-button type="submit" tabindex="3" class="mat-chip mat-primary mat-standard-chip mat-chip-selected">Update Changes</button>
+                               </div> 
+    
+    
+    
+    
+                        </div>
+    
+    
+                    </mat-tab>
+                    <mat-tab label="Subscribed" class="Subscribed_part"> 
+                            <div class="crentplan_tab">Curent plan</div>
+                            <mat-card class="example-card courentplan">
+                                    <mat-card-header>
+                                            <div mat-card-avatar class="example-header-image"><img src="assets/appImages/free_icon.png" alt=""></div>
+                                            <mat-card-title>Free NHS</mat-card-title>
+                                           </mat-card-header>
+                                           <div class="text_datesub">
+                                                <p>Subscribed On</p>
+                                                <h3>21 Jan, 2017</h3>
+                                            </div> 
+                                            <div class="text_datesub">
+                                                    <p>Subscribed On</p>
+                                                    <h3>21 Jan, 2017</h3>
+                                                </div> 
+                                      <mat-card-content>
+                                            <mat-list>
+                                                    <mat-list-item><mat-icon>done</mat-icon>Round the clock consultation and advice </mat-list-item>
+                                                    <mat-list-item><mat-icon>done</mat-icon>Resolution within day </mat-list-item>
+                                                    <mat-list-item><mat-icon>done</mat-icon>Response within minutes and suggested action </mat-list-item>                                            
+                                                    <mat-list-item><mat-icon>done</mat-icon>Face to face/Video/Online consultation </mat-list-item>
+                                                </mat-list>
+                                    </mat-card-content>
+                                    <mat-card-actions>
+                                            <div class="signinbtn text-center">
+                                                    <button mat-raised-button type="submit" tabindex="3" class="mat-chip mat-primary mat-standard-chip mat-chip-selected">Upgrade Plan</button>
+                                               </div> 
+                    
+                                     </mat-card-actions>
+                                  </mat-card>
+                    
+                    
+                    </mat-tab>
+                </mat-tab-group>
+    
+            </div>
+        </div>
+    
+    
+    </div>

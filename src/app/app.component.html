@@ -1,0 +1,36 @@
+<ngx-spinner
+bdOpacity = 0.1
+bdColor = "rgba(231,221,221,0.32)"
+size = "medium"
+color = "#e60e0e"
+type = "ball-atom"
+[fullScreen] = "false"
+>
+</ngx-spinner>
+<main [@fadeAnimation]="getRouterOutletState(o)">
+    <router-outlet #o="outlet"></router-outlet>
+</main>
+
+
+
+<div id="bottom_nav_container" >
+        <div class="footer_part">
+                <div class="foicons about_icon disable" >
+                <i></i>
+                <span>About</span>
+                </div>
+                <div class="foicons health_icon disable" >
+                        <i></i><span>Health</span>
+                </div>
+                <div class="foicons home_icons active"  routerLink="dashboard">
+                        <i></i><span>Home</span>
+                </div>
+                <div class="foicons profile_icons"  routerLink="userprofile">
+                        <i></i><span>Profile</span>
+                </div>
+                <div class="foicons alert_icons"  routerLink="inappnotification">
+                        <i></i><span>Notification</span>
+                </div>
+
+        </div>
+</div>

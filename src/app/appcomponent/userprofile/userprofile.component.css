@@ -1,0 +1,178 @@
+#userprofile {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.userdata {
+    width: 100%;
+    display: flex;
+    padding-top: 15px;
+    align-items: center;
+}
+
+.user_setting {
+    background: #f1f1f1;
+    padding: 0;
+    position: relative;
+    line-height: 42px;
+    text-align: center;
+    font-weight: 500;
+    color: #5a5a5a;
+}
+#userprofile .mat-tab-group{
+    height: 83%;
+}
+
+.usir_img img {
+    width: 100%;
+    border-radius: 100px;
+}
+
+.usir_img {
+    border-radius: 100%;
+    width: 20%;
+    position: relative;
+}
+
+.usir_img span {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    right: 0;
+    bottom: -1px;
+    background: #ccc;
+    border-radius: 50px;
+    padding: 4px;
+    padding-top: 1px;
+
+}
+
+.usir_img span .mat-icon {
+    font-size: 13px;
+}
+
+.usir_img span img {
+    width: 97%;
+    margin-top: -14px;
+}
+
+.user_text {
+    width: 50%;
+    text-align: left;
+    padding-left: 14px;
+}
+
+.user_text h3 {
+    color: #000;
+    font-size: 12px;
+    margin: 0;
+}
+
+.user_text h2 {
+    color: #000;
+    font-size: 14px;
+    margin: 0;
+}
+
+.user_lock {
+    width: 15%;
+    overflow: hidden;
+    text-align: right;
+}
+
+.user_lock button {
+    border-radius: 100%;
+    width: 40px !important;
+    height: 40px !important;
+    box-shadow: none;
+    padding: 0;
+    background: #e5e5e5;
+    outline: none;
+    min-width: auto !important;
+}
+
+.user_lock button:active {
+    box-shadow: none;
+}
+
+.user_lock button .mat-icon {
+    font-size: 20px;
+    width: 19px;
+}
+
+.formdata .mat-icon {
+    position: absolute;
+    right: 0;
+    font-size: 15pt;
+    bottom: 0px;
+    color: #999;
+}
+
+#userprofile .mat-form-field {
+    width: 100%;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border: none;
+}
+
+#genderLabel {
+    position: relative;
+}
+
+#userprofile .mat-slider-horizontal {
+    margin-bottom: 25px;
+}
+
+.mat-chip.mat-standard-chip.mat-chip-selected.mat-primary {
+    background-color: #fbc219;
+    color: #1c1c1c;
+    border-radius: 50px;
+    padding: 0px 40px;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.mat-form-field{
+    pointer-events: none;
+}
+.crentplan_tab{
+    position: relative;
+    display: inline-block;
+    width: auto;
+    padding: 6px 14px 9px 14px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 0px;
+    background: #4b68e5;
+}
+.example-header-image img{
+    width: 100%;
+}
+.text_datesub{
+    width: 50%;
+    float: left;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.text_datesub p{
+    margin: 0;
+}
+.text_datesub h3{
+    font-size: 19px;
+}
+
+@media (max-width: 320px) {
+    .text_datesub p{
+        font-size: 12px;
+    }
+    .text_datesub h3{
+        font-size:16px;
+    }
+    
+}

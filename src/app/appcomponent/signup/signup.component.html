@@ -1,0 +1,184 @@
+<div class="signupbased">
+    <div class="signup_right_bg">
+
+        <button id='signupCloseButton' mat-raised-button="mat-raised-button" (click)="closeSignUpComponent($event)" class="closebtn">
+            <mat-icon>close_rounded</mat-icon>
+        </button>
+
+        <div class="container">
+            <div class="col-md-12 setheight">
+                <div id="signupContainer">
+                    <div id="pagetitle">
+                        <H1>Sign Up</H1>
+
+                        <H3>Fill up the form to resigter</H3>
+                    </div>
+
+                    <div id="formContainer">
+                        <div class="step_point" id="stepContainer">
+                            <div id="step1" class="step1 visited active"><span></span></div>
+                            <div id="step2" class="step2 "><span></span></div>
+                            <div id="step3" class="step3 "><span></span></div>
+                            <div id="step4" class="step4 "><span></span></div>
+                        </div>
+                        <mat-horizontal-stepper linear #stepper>
+                            <mat-step [stepControl]="firstFormGroup" [optional]="false">
+                                <form [formGroup]="firstFormGroup">
+                                    <mat-form-field class="form-group">
+                                        <input matInput="matInput" type="text" class="form-control" placeholder="First Name" autocomplete="off" maxlength="26" formControlName="firstName" required />
+                                        <mat-icon>person_outline</mat-icon>
+                                    </mat-form-field>
+
+                                    <mat-form-field class="form-group">
+                                        <input matInput="matInput" type="text" class="form-control" formControlName="middlename" placeholder="Middle Name" autocomplete="off" maxlength="26" />
+                                        <mat-icon>person_outline</mat-icon>
+                                    </mat-form-field>
+
+                                    <mat-form-field class="form-group">
+                                        <input matInput="matInput" type="text" class="form-control" placeholder="Last Name" autocomplete="off" maxlength="26" formControlName="lastName" required />
+
+                                        <mat-icon>person_outline</mat-icon>
+
+
+                                    </mat-form-field>
+                                </form>
+                            </mat-step>
+
+                            <mat-step [stepControl]="secondFormGroup" [optional]="false">
+                                <form [formGroup]="secondFormGroup">
+                                    <div class="form-group">
+                                        <div id="genderLabel">
+                                            <p>Gender</p>
+                                            <mat-card>
+                                                <div class="gender_box">
+                                                    <div class="gender_male"><img src="assets/appImages/gender/male.svg" alt=""></div>
+                                                    <div class="gender_female"><img src="assets/appImages/gender/woman.svg" alt=""></div>
+                                                    <div class="gender_other"><img src="assets/appImages/gender/unisex.svg" alt=""></div>
+                                                </div>
+
+
+                                                <mat-slider class="example-margin" max="100" min="0" step="50" (change)="updateSliderValue($event)" formControlName="gender">
+                                                </mat-slider>
+                                            </mat-card>
+                                        </div>
+                                    </div>
+
+                                    <mat-form-field class="form-group datepicker_signup">
+                                        <input matInput="matInput" [min]="minDate" [max]="maxDate" [matDatepicker]="picker" placeholder="Date of Birth" class="form-control" autocomplete="off" (keypress)="numberDateOnly($event)" [maxLength]="DOBMaxLength" formControlName="DOB" />
+
+                                        <mat-datepicker-toggle matSuffix="matSuffix" [for]="picker" [disableRipple]="true">
+                                        </mat-datepicker-toggle>
+
+                                        <mat-datepicker touchUi="touchUi" #picker disabled="false">
+                                        </mat-datepicker>
+                                    </mat-form-field>
+
+                                    <mat-form-field class="form-group">
+                                        <input matInput="matInput" type="tel" class="form-control" placeholder="NHS Number" autocomplete="off" [maxLength]="NHSMaxLength" (keypress)="numberOnly($event)" formControlName="NHS" />
+
+                                        <mat-icon>add_outline</mat-icon>
+                                    </mat-form-field>
+
+                                    <mat-form-field class="form-group">
+                                        <input matInput="matInput" type="tel" class="form-control" formControlName="userPhoneNumber" placeholder="Phone Number" autocomplete="off" (keypress)="numberOnly($event)" [maxLength]="userPhoneNumberMaxLength" />
+
+                                        <mat-icon>call_outline</mat-icon>
+                                    </mat-form-field>
+
+                                </form>
+                            </mat-step>
+
+                            <mat-step [stepControl]="thirdFormGroup" [optional]="false">
+                                <form [formGroup]="thirdFormGroup" class="location_form">
+
+                                    <mat-form-field class="form-group">
+                                        <input matInput="matInput" type="text" class="form-control" formControlName="userAddress" placeholder="Postcode" autocomplete="off" maxlength="7" [(ngModel)]="userEnteredPostcode" />
+
+                                        <mat-icon>location_on_outline</mat-icon>
+                                    </mat-form-field>
+
+                                    <mat-card> {{userSelectedAddress}}</mat-card>
+
+                                    <button class="search_btn" mat-raised-button="mat-raised-button" (click)="getUserEnteredPincodeAddressList($event)">Search</button>
+                                </form>
+
+
+
+
+
+                            </mat-step>
+
+                            <mat-step [stepControl]="fourthFormGroup" [optional]="false">
+                                <form [formGroup]="fourthFormGroup">
+                                    <mat-form-field class="form-group">
+                                        <input matInput="matInput" type="email" class="form-control" formControlName="userEmailAddress" placeholder="Email Address" autocomplete="off" maxlength="26" />
+
+                                        <mat-icon>mail_outline</mat-icon>
+                                    </mat-form-field>
+
+                                    <mat-form-field class="form-group">
+                                        <input matInput="matInput" type="password" class="form-control" formControlName="userPassword" placeholder="Password" autocomplete="off" maxlength="26" />
+
+                                        <mat-icon>lock_outline</mat-icon>
+                                    </mat-form-field>
+
+                                    <mat-form-field class="form-group">
+                                        <input matInput="matInput" type="password" class="form-control" formControlName="userPasswordConfirm" placeholder="Confirm Password" autocomplete="off" maxlength="26" />
+
+                                        <mat-icon>lock_outline</mat-icon>
+                                    </mat-form-field>
+
+                                    <div id="termAndConditionContainer">
+                                        <p>
+                                            By signing up you are agree to HappyGP
+                                        </p>
+
+                                        <p>
+                                            <span>Terms & Condition</span> &
+
+                                            <span>Privacy Policy</span>
+                                        </p>
+                                    </div>
+                                </form>
+                            </mat-step>
+
+
+                        </mat-horizontal-stepper>
+
+                        <div id="addressAPIResultDialogBox" class="addressAPIResultDialogBox">
+                            <h1 mat-dialog-title="mat-dialog-title">Hi</h1>
+                        </div>
+
+                        <div class="bottom_margin">
+                            <div class="back_form" id="stepperBackButton">
+                                <button mat-button="mat-button" (click)="stepperMoveBack(stepper)">
+                                    <mat-icon>arrow_back_outline</mat-icon>
+                                </button>
+                            </div>
+
+                            <div class="next_form" id="stepperNextButton">
+                                <button mat-button="mat-button" (click)="validateFormFields(stepper)">
+                                    <mat-icon>arrow_forward_outline</mat-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="signInSuccessMessage" class="signinsuccess hideSignInSuccess">
+            <div class="signin_inner">
+                <div id="appLogo"></div>
+                <h3>Hi</h3>
+                <h2>{{userRegisteredName}}</h2>
+                <h3>You have been successfully <br>signed up</h3>
+                <button class="goverify_email" (click)="closeSignUpComponent($event)" mat-raised-button="mat-raised-button">Go and verify your email</button>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>

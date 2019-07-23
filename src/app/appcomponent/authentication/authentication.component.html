@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="col-md-12">
+      <div id="authenticationContainer">
+  <div id="appLogo"></div>
+  <div id="pageTitle">
+    <H1>Sign In</H1>
+    <H3>If already registered, sign in here.</H3>
+  </div>
+  <div class="form_section">
+    <form (ngSubmit)="onLogin()" novalidate  autocomplete='off' class="">
+      <!-- <div class="form-group">
+        <input type="text" class="form-control" tabindex="1" id="username"  name="username" required placeholder="User Name"  autocomplete="off" maxlength="26" [(ngModel)]="usercredential.username">
+        <img id="emailIcon" />
+      </div> -->
+
+      <mat-form-field class="form-full-width form-group ">
+        <input matInput type="email" class="inputtext form-control" tabindex="1" id="username"  name="username"  autocomplete="off" maxlength="26" [(ngModel)]="usercredential.username" placeholder="Email Address">
+         <mat-icon>mail_outline</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field class="form-full-width form-group">
+        <input matInput type="password" class="inputtext form-control" tabindex="2" id="password" name="password"   autocomplete="off" maxlength="26" [(ngModel)]="usercredential.passkey" placeholder="Password">
+        <mat-icon>lock_outline</mat-icon>
+      </mat-form-field>
+      <div>
+          <p class="forgetpass" (click)="forgetPasswordClicked($event)">Forget Password</p>
+        </div>
+      <div style="height: 15px;;">
+          <div  class="help-block">Credentials required.</div>
+          <div  class="help-block">Incorrect Credentials.</div>
+      </div>
+        <div class="signinbtn">
+            <button mat-raised-button type="submit" tabindex="3" class="mat-chip mat-primary mat-standard-chip mat-chip-selected">Sign In</button>
+       </div> 
+    </form>
+    
+    <div class="donthaveaccount">
+      <p>Don't have an account? &nbsp;
+        <span mat-button tabindex="4" (click)="signupButtonClicked($event)">Sign Up</span>
+      </p>
+    </div>
+  </div>
+
+  </div>
+</div>
+</div>
